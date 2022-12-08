@@ -1,9 +1,10 @@
 package com.example.manifestpermission
 
-object ManifestPermission {
-    private val TAG = ManifestPermission::class.java.getSimpleName()
+object TagPermission {
+    private val TAG = TagPermission::class.java.getSimpleName()
 
-    const val NULL_PERMISSION_CODE = 0
+    const val PERMISSION_DENIED = -1
+    const val PERMISSION_GRANTED = 0
     const val SETTINGS_PERMISSION_CODE = 1000
     const val ALL_PERMISSION_CODE = 1001
     const val TELEPHONY_PERMISSION_CODE = 1002
