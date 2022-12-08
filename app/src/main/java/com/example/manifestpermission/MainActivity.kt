@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
         cameraCheckPermissions.setOnClickListener {
             checkCameraPermission(Manifest.permission.CAMERA, 12)
             checkCameraPermission(Manifest.permission.READ_SMS, 122)
