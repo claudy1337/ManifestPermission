@@ -3,16 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.manifestpermission">
 
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ManifestPermission"
+        android:theme="@style/appTheme"
         tools:targetApi="31">
+        <activity
+            android:name=".successful_permission"
+            android:exported="false"
+            android:label="@string/title_activity_successful_permission"
+            android:theme="@style/Theme.ManifestPermission.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
